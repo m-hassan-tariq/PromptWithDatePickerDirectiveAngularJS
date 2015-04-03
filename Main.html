@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Content/jquery.js"></script>
+    <script src="Content/jquery-ui.js"></script>
+    <script src="Content/angular.js"></script>
+    <script src="Content/angular-route.js"></script>
+    <script src="Content/App/Controller.js"></script>
+    <link href="Content/PopupStyle.css" rel="stylesheet" />
+    <link href="Content/jquery-ui.css" rel="stylesheet" />
+</head>
+    <body ng-app="popup">
+        <div ng-controller="popupController">
+            <input type="button" value="Show Popup" ng-click="isPopupVisble()" />
+            <div ng-show="showPopup">
+                <div class="alertBg">
+                    <div class="alertPlaceholder ">
+                        <div class="alertIcon">
+                            <img src="Content/infoiconlarge.jpg" />
+                        </div>
+                        <h3>Are you sure?</h3>
+                        <div class="inlineError" ng-show="errorMessage"> Please provide an end date. </div>
+                        <input type="text" datepicker class="textBoxStyle datetimePicker" placeholder="Effective End Date" data-ng-model="EndDate" />
+                        <div>
+                            <button id="btnOkRemove" class="confirm" tabindex="2" data-ng-click="deleteRecord()">OK</button>
+                            <button id="btnCanceRemove" class="cancel" tabindex="2" data-ng-click="hidePrompt()">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
