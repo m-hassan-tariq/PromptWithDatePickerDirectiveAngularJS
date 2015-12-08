@@ -1,4 +1,4 @@
-# CustomPromptWithDatePickerDirectiveAngularJS
+# Custom Prompt With DatePicker Directive AngularJS
 Integration of datepicker as directive in custom prompt in AngularJS 
 
 Due to design constraints there is a slight possibility, you are advised not to use Angular UI model in order to display prompt box in your angular web application, however below code help you to achieve custom prompt with dataepicker intgration in it with basic validation.
